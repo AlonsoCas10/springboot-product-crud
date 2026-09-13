@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DataSystem - Productos</title>
+
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- ============================= -->
+
+    <nav class="navbar">
+
+        <div class="navbar-logo">
+            <span class="logo-icon">◈</span>
+
+            <div>
+                <strong>DataSystem</strong>
+                <small>Panel administrativo</small>
+            </div>
+        </div>
+
+        <div class="navbar-menu">
+
+            <a href="#" class="activo">
+                ▦ Productos
+            </a>
+
+            <a href="#">
+                ◫ Categorías
+            </a>
+
+            <a href="#">
+                ◎ Usuarios
+            </a>
+
+            <a href="#">
+                ⚙ Configuración
+            </a>
+
+            <a href="#">
+                ⇥ Cerrar sesión
+            </a>
+
+        </div>
+
+        <div class="navbar-user">
+
+            <div class="avatar">
+                A
+            </div>
+
+            <div>
+                <strong>Administrador</strong>
+                <small>Administrador</small>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ============================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ============================= -->
+
+    <main class="contenido">
+
+        <!-- Ruta -->
+
+        <div class="breadcrumb">
+            <strong>Inicio / Productos</strong>
+        </div>
+
+
+        <!-- TÍTULO -->
+
+        <div class="titulo">
+
+            <div class="titulo-icon">
+                ;-;
+            </div>
+
+            <div>
+                <h1>Inventario</h1>
+                <p>Gestión de productos</p>
+            </div>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- REGISTRAR PRODUCTO -->
+        <!-- ============================= -->
+
+        <section class="panel">
+
+            <h2 id="tituloFormulario">
+                Registrar Producto
+            </h2>
+
+            <form id="formProducto">
+
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="precio">
+                        Precio:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="precio"
+                        step="0.01"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="categoria">
+                        Categoría:
+                    </label>
+
+                    <select
+                        id="categoria"
+                        required
+                    >
+
+                        <option value="">
+                            Seleccionar categoría
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="botones">
+
+                    <button
+                        type="submit"
+                        id="btnGuardar"
+                    >
+                        Guardar
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btnCancelar"
+                        onclick="cancelarEdicion()"
+                        style="display: none;"
+                    >
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="mensaje"></p>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- LISTA DE PRODUCTOS -->
+        <!-- ============================= -->
+
+        <section class="panel">
+
+            <div class="lista-header">
+
+                <div>
+                    <h2>Lista de Productos</h2>
+                    <p>Productos registrados en el sistema</p>
+                </div>
+
+                <input
+                    type="text"
+                    id="buscarProducto"
+                    placeholder="Buscar producto..."
+                >
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Categoría</th>
+                            <th>Acciones</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaProductos">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
+```
